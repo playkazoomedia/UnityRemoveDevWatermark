@@ -55,7 +55,7 @@ namespace RemoveDevWatermark.Editor
             var index = KMP(bytes, nameHex);
             if (index == -1) return (LogType.Error, "nameHex is not found");
 
-#if UNITY_2021
+#if UNITY_2021 || UNITY_2022
             const int widthIndex = 28;
 #else
             const int widthIndex = 24;
@@ -64,7 +64,7 @@ namespace RemoveDevWatermark.Editor
             if (bytes[index + widthIndex] != widthValue) return (LogType.Error, $"bytes[index + widthIndex]({bytes[index + widthIndex]}) != widthValue({widthValue})");
             bytes[index + widthIndex] = 1;
 
-#if UNITY_2021
+#if UNITY_2021 || UNITY_2022
             const int heightIndex = 32;
 #else
             const int heightIndex = 28;
