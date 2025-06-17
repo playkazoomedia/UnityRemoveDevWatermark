@@ -46,7 +46,6 @@ namespace RemoveDevWatermark.Editor
 #endif
                 var modifiableFile = new ModifiableFile(path);
                 return Execute(modifiableFile);
-                
             }
 
 #if UNITY_2022
