@@ -39,7 +39,7 @@ namespace RemoveDevWatermark.Editor
 
             if (report.summary.platform == BuildTarget.iOS)
             {
-#if UNITY_2021
+#if UNITY_2021 || UNITY_2022
                 var path = Path.Combine(report.summary.outputPath, "Data", "unity default resources");
 #else
                 var path = Path.Combine(report.summary.outputPath, "Data", "Resources", "unity default resources");
